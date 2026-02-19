@@ -34,8 +34,8 @@ export default function Hero() {
   const toggleContact = () => setContactOpen(!contactOpen);
 
   const projects = [
-    "/images/projects/green_loan1.png",
-    "/images/projects/green_loan2.png",
+    "/images/projects/commBank.png",
+    "/images/projects/Deloitte.png",
     "/images/projects/green_loan3.png",
   ];
 
@@ -44,14 +44,14 @@ export default function Hero() {
       <section className={styles.hero}>
         {/* ================= TEXT ================= */}
         <div className={styles.heroText}>
-          <h1 className={styles.title}>
-            Turning Ideas Into Reliable,<br className={styles.hideSm} />
-            Data-Driven Web Experiences.
-          </h1>
+          <h3 className={styles.title}>
+            Designing Scalable Data Solutions That Think<br className={styles.hideSm} />
+            
+          </h3>
           <p className={styles.subtitle}>
-            I’m a full-stack web developer with a background in Data Science and
-            Electronics & Communication Engineering. I build fast, accessible
-            applications and turn complex data into intuitive user experiences.
+            I am experienced software developer with background in Electronics and Communication 
+            Engineering, Data Science and AI, and I help business 
+            to build scalable data driven solutions that utilizes Machine Learning, Big Data and Complex Algorithms.
           </p>
         </div>
 

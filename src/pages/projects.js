@@ -16,7 +16,7 @@ export default function Projects() {
         "Analyzed the Green Loan dataset to identify key patterns and risks, built predictive models for loan approval, and visualized insights using dashboards.",
       images: [
         "/images/projects/green_loan1.png",
-        "/images/projects/green_loan2.png",
+        "/images/projects/green_loan3.png",
       ],
       keyInsights: [
         "Loan approval rate improved by 15% after model implementation",
