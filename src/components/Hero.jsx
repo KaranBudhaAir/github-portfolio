@@ -49,8 +49,7 @@ export default function Hero() {
             
           </h3>
           <p className={styles.subtitle}>
-            I am experienced software developer with background in Electronics and Communication 
-            Engineering, Data Science and AI, and I help business 
+            I am experienced software developer with background in Data Science and AI, and I help business 
             to build scalable data driven solutions that utilizes Machine Learning, Big Data and Complex Algorithms.
           </p>
         </div>

@@ -1,21 +1,19 @@
-"use client";
+import { useState } from 'react'
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Inter } from 'next/font/google'
+import styles from '@/styles/Home.module.css'
+import Hero from '@/components/Hero'
 
-import { useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import Hero from "@/components/Hero";
-
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [contactOpen, setContactOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleContact = () => setContactOpen(!contactOpen);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
 
   return (
     <>
@@ -27,8 +25,10 @@ export default function Home() {
       </Head>
 
       <nav className={styles.navbar}>
-        {/* LEFT LINKS (Main page links) */}
-        <div className={`${styles.navLeft} ${menuOpen ? styles.active : ""}`}>
+        {/* LEFT LINKS */}
+        <div
+          className={`${styles.navRight} ${menuOpen ? styles.active : ''}`}
+        >
           <Link href="/">Home</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/about">About</Link>
@@ -39,8 +39,10 @@ export default function Home() {
           <div className={styles.logoCircle}>KB</div>
         </div>
 
-        {/* RIGHT LINKS (Social icons only on desktop) */}
-        <div className={styles.navRight}>
+        {/* RIGHT LINKS */}
+        <div
+          className={`${styles.navRight} ${menuOpen ? styles.active : ''}`}
+        >
           <Link href="mailto:kunal.neeon@gmail.com">
             <Image
               src="/images/svgs/gmail.svg"
@@ -79,9 +81,9 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* BURGER ICON (toggles only navLeft) */}
+        {/* BURGER ICON */}
         <div
-          className={`${styles.burger} ${menuOpen ? styles.active : ""}`}
+          className={`${styles.burger} ${menuOpen ? styles.active : ''}`}
           onClick={toggleMenu}
         >
           <span></span>
@@ -90,11 +92,7 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* HERO SECTION */}
-      <Hero
-        contactOpen={contactOpen}
-        toggleContact={toggleContact}
-      />
+      <Hero />
     </>
-  );
+  )
 }
